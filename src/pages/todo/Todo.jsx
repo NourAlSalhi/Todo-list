@@ -24,10 +24,13 @@ const Todo = () => {
         setTasks(newTask);
     }
     const removeTask = (index) => {
+        if (tasks.length > 1){
         const newTask = [...tasks];
         newTask.splice(index, 1);
         setTasks(newTask);
+        }
     }
+
 
     const RemoveItem = e => {
         setTasks([])
